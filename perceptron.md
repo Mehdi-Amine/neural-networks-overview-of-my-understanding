@@ -11,7 +11,7 @@ An input layer fully connected with an output layer:
 - The output layer for perceptrons is one node. It contains the result of the dot product between the input and the parameters. Because dot products are linear functions, they are not enough to represent nonlinearities in the data. Neural Networks are called Universal Function Approximators because they can approximate any function. To be able to achieve this, non-linearity is introduced with activation functions like Sigmoid, and ReLU.
 
 
-$$\a' = \sigma(w a + b) \tag{1}$$
+$$a' = \sigma(w a + b) \tag{1}$$
 
 In equation (1), $a$ is initially the input vector. $a'$ is the vector of all the activations in the next layer. $w$ is the vector of weights belonging to a'. Each node in $a'$ has as many weights as there are nodes in $a$. $b$ is the vector of biases belonging to $a'$. Each node in $a'$ has only one bias. 
 
