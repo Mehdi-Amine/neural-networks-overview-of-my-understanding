@@ -54,7 +54,7 @@ a = sigmoid(z)
 $$\nabla_a C = (a^L-y) \tag{3}$$
 $$\delta^L = \nabla_a C \odot \sigma'(z^L) \tag{4}$$
 $$\frac{\partial C}{\partial b} = \delta \tag{5}$$
-$$\frac{\partial C}{\partial w} = instance\*\delta \tag{6}$$
+$$\frac{\partial C}{\partial w} = instance\delta \tag{6}$$
 
 In Python:
 ```python
@@ -78,7 +78,7 @@ nabla_w = np.dot(delta, instance.reshape(1,-1))
 6. Backpropagate, then update the weights and bias using:
 $$b_{new} \rightarrow b_{old}-\eta \delta \tag{7}$$
 
-$$w_{new} \rightarrow w_{old}-\eta \*instance \*\delta \tag{8}$$
+$$w_{new} \rightarrow w_{old}-\eta instance \delta \tag{8}$$
 
 7. Repeat from step 4 using another instance. Gradient Descent stops when the gradient is 0, close to 0 by some defined value, or after the defined maximum number of iterations has been reached.
 
