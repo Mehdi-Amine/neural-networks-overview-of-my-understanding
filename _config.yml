@@ -1,3 +1,2 @@
 theme: jekyll-theme-midnight
-gems:
-- jekyll-latex
+markdown: kramdown
